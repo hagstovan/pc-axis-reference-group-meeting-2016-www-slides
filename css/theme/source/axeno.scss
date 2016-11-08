@@ -1,0 +1,108 @@
+/**
+ * axeno theme for reveal.js.
+ *
+ * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/cinzel-regular/cinzel-regular.css);
+@import url(../../lib/font/league-gothic/league-gothic.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainColor: #333;
+$headingColor: #333;
+$headingTextShadow: none;
+$backgroundColor: #f7fbfc;
+$linkColor: #3b759e;
+$linkColorHover: lighten( $linkColor, 20% );
+//$selectionBackgroundColor: rgba(79, 64, 28, 0.99);
+$selectionBackgroundColor: #134674;
+$heading1TextShadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 20px 20px rgba(0,0,0,.15);
+
+
+$headingTextTransform: none;
+
+
+.reveal .slides h3,
+.reveal .slides h5 {
+	text-align:left;
+	padding-left: 20px;
+}
+
+// Background generator
+@mixin bodyBackground() {
+	@include radial-gradient( #add9e4, #f7fbfc );
+}
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+
+#breddi {
+	position: absolute;
+	width: 96%;
+	padding: 0.5em 1em;
+	margin: 1em;
+	background: rgba(255,255,255,0.3);
+	color: rgba(36,50,119,0.7);
+	font-weight: lighter;
+	font-family: 'cinzelregular', serif;
+	text-transform: uppercase;
+	letter-spacing: 0.23em;
+}
+
+#breddi h2 {
+	font-size: 1.2em;
+}
+
+#breddi h4 {
+	font-size: 0.8em;
+}
+
+#breddi img {
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	width: 90px;
+	height: 90px;
+}
+
+.slide-number::before {
+	content: 'Nordisk Statistikermøte, Stockholm 2016 - ';
+}
+
+section {
+	background: rgba(255,255,255,0.3);
+}
+
+.smallertext {
+	font-size: 0.9em !important;
+}
+
+.img50pct {
+	width: 70%;
+}
+
+.red-clock,
+.green-check {
+	display: inline;
+	border: 0 !important;
+	margin: 0 !important;
+	box-shadow: none !important;
+    width: 1em;
+    height: 1em;
+    valign: bottom;
+ }
